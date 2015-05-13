@@ -1,4 +1,5 @@
-﻿using Library_Group1.Models;
+﻿using Library_Group1.DAL;
+using Library_Group1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace Library_Group1.DLA
 {
-    public class SachInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SachContext>
+    public class SachInitializer : System.Data.Entity.System.Data.Entity.DropCreateDatabaseIfModelChanges<SachContext>
     {
         protected override void Seed(SachContext context)
         {
@@ -22,17 +23,30 @@ namespace Library_Group1.DLA
             {
                 new LoaiSach {MaLoai="1", TenLoai="2"},
                 new LoaiSach {MaLoai="2", TenLoai="3"},
-                new LoaiSach {MaLoai="3", TenLoai="4",
+                new LoaiSach {MaLoai="3", TenLoai="4"},
             };
             LoaiSach.ForEach(s => context.LoaiSach.Add(s));
             context.SaveChanges();
             var NhaXB = new List<NhaXB>
             {
-                new NhaXB{MaNXB="1", TenNXB="2", DiaChi="vvfdgfdd", SDT=365345, Email="dvbddzn"},
-                new NhaXB{MaNXB="2", TenNXB="3", DiaChi="vvfdvgd", SDT=353545, Email="dvbjgzn"},
-                new NhaXB{MaNXB="3", TenNXB="4", DiaChi="vvfdgvd", SDT=358345, Email="dvbzjhn"},
+                new NhaXB{MaNXB="1", TenNXB="2", Diachi="vvfdgfdd", SDT=365345, Email="dvbddzn"},
+                new NhaXB{MaNXB="2", TenNXB="3", Diachi="vvfdvgd", SDT=353545, Email="dvbjgzn"},
+                new NhaXB{MaNXB="3", TenNXB="4", Diachi="vvfdgvd", SDT=358345, Email="dvbzjhn"},
             
             };
             NhaXB.ForEach(s => context.NhaXB.Add(s));
             context.SaveChanges();
+            var TacGia = new List<TacGia>
+            {
+            new TacGia{MaTG="1", Tentacgia="fshag", Diachi="dfa", SDT=1673686, Email="fhjsdgfjs"},
+            new TacGia{MaTG="1", Tentacgia="fshag", Diachi="dfa", SDT=1673686, Email="fhjsdgfjs"},
+            new TacGia{MaTG="1", Tentacgia="fshag", Diachi="dfa", SDT=1673686, Email="fhjsdgfjs"},
+            
+            
+            };
+            TacGia.ForEach(s => context.TacGia.Add(s));
+            context.SaveChange();
+
+        }
+    }
 }
