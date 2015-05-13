@@ -12,8 +12,6 @@ namespace Library_Group1.Models
         public string Diachi { get; set; }
         public int SDT { get; set; }
         public string Email { get; set; }
-        public virtual ICollection<Sach> sach { get; set; }
-
 
     }
 }

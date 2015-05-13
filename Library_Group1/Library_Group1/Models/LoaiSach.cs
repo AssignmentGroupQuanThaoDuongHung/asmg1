@@ -10,6 +10,6 @@ namespace Library_Group1.Models
         public string MaLoai { get; set; }
         public string TenLoai { get; set; }
 
-        public virtual ICollection<Sach> sach { get; set; }
+        public virtual BangSach BangSach { get; set; }
     }
 }
