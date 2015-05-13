@@ -5,13 +5,12 @@ using System.Web;
 
 namespace Library_Group1.Models
 {
-    public class TacGia
+    public class NhaXB
     {
-        public string MaTG { get; set; }
-        public string Tentacgia { get; set; }
+        public string MaNXB { get; set; }
+        public string TenNXB {get; set;}
         public string Diachi { get; set; }
         public int SDT { get; set; }
         public string Email { get; set; }
-
     }
 }
